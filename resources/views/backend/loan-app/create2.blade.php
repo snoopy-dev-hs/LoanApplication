@@ -3,7 +3,16 @@
 @section("title", "Create")
 
 @push("styles")
-
+    <style>
+        #bu-branch {
+            outline: none;
+            /*border-radius: unset;*/
+            /*border-bottom: 1px solid #222222;*/
+        }
+        #bu-branch:focus {
+            outline: none;
+        }
+    </style>
 @endpush
 
 @section("contents")
@@ -34,7 +43,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="md-form md-outline">
-                            <input type="text" name="per_dob" id="per-dob" class="form-control form-control-lg" required>
+                            <input type="date" name="per_dob" id="per-dob" class="form-control form-control-lg" required>
                             <label for="per-dob" class="">Date of Birth</label>
                         </div>
                     </div>
@@ -60,7 +69,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="md-form md-outline">
-                            <input type="text" name="per_expiry_date" id="per-expiry-date" class="form-control form-control-lg" required>
+                            <input type="date" name="per_expiry_date" id="per-expiry-date" class="form-control form-control-lg" required>
                             <label for="per-expiry-date" class="">Expiry Date</label>
                         </div>
                     </div>
@@ -86,9 +95,8 @@
                         <!-- Name -->
                         <select name="per_marital_status" class="mdb-select ">
                             <option value="" selected disabled>Select Marital Status</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="other">Other</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
                         </select>
                     </div>
                 </div>
@@ -179,7 +187,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="md-form md-outline">
-                            <input type="text" name="gu_dob" id="gu-dob" class="form-control form-control-lg" required>
+                            <input type="date" name="gu_dob" id="gu-dob" class="form-control form-control-lg" required>
                             <label for="gu-dob" class="">Date of Birth</label>
                         </div>
                     </div>
@@ -205,7 +213,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="md-form md-outline">
-                            <input type="text" name="gu_expiry_date" id="gu-expiry-date" class="form-control form-control-lg" required>
+                            <input type="date" name="gu_expiry_date" id="gu-expiry-date" class="form-control form-control-lg" required>
                             <label for="gu-expiry-date" class="">Expiry Date</label>
                         </div>
                     </div>
@@ -228,12 +236,10 @@
                     </div>
 
                     <div class="col-md-4 mb-4 mt-4">
-                        <!-- Name -->
                         <select name="gu_marital_status" class="mdb-select">
                             <option value="" selected disabled>Select Marital Status</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="other">Other</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
                         </select>
                     </div>
                 </div>
@@ -309,22 +315,22 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="md-form md-outline">
-                            <input type="text" id="f2" class="form-control form-control-lg" style="font-size: 20px;">
-                            <label for="f2" class="">Amount</label>
+                            <input type="text" name="ld_amount" id="ld-amount" class="form-control form-control-lg" style="font-size: 20px;" required >
+                            <label for="ld-amount" class="">Amount ($)</label>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="md-form md-outline">
-                            <input type="text" id="f2" class="form-control form-control-lg">
-                            <label for="f2" class="">Interest</label>
+                            <input type="text" name="ld_interest" id="ld-interest" class="form-control form-control-lg" required >
+                            <label for="ld-interest" class="">Interest (%)</label>
                         </div>
                     </div>
 
                     <div class="col-md-4 mb-4">
                         <div class="md-form md-outline">
-                            <input type="text" id="f2" class="form-control form-control-lg">
-                            <label for="f2" class="">Term</label>
+                            <input type="text" name="ld_term" id="ld-term" class="form-control form-control-lg" required >
+                            <label for="ld-term" class="">Term (Month)</label>
                         </div>
                     </div>
                 </div>
@@ -333,8 +339,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form md-outline">
-                            <textarea type="text" id="form101" class="md-textarea form-control" rows="3"></textarea>
-                            <label for="form101">Purpose</label>
+                            <textarea type="text" name="ld_purpose" id="ld-purpose" class="md-textarea form-control" rows="3" required ></textarea>
+                            <label for="ld-purpose">Purpose</label>
                         </div>
                     </div>
                 </div>
@@ -348,10 +354,20 @@
             <div class="card-body">
                 {{-- row 1 --}}
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6 mb-4 mt-4">
+                        <select name="bu_branch" class="mdb-select" id="bu-branch" style="outline: unset; border-radius: unset;">
+                            <option value="" selected disabled>Select Branch</option>
+                            <option value="pp">Phone Penh</option>
+                            <option value="pv">Prey Veng</option>
+                            <option value="kep">Kep</option>
+                            <option value="kompot">Kompot</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
                         <div class="md-form md-outline">
-                            <input type="text" id="f2" class="form-control form-control-lg">
-                            <label for="f2" class="">Application Code</label>
+                            <input type="text" name="bu_app_code" id="bu-app-code" class="form-control form-control-lg" value="PP-202201-01" required >
+                            <label for="bu-app-code" class="">Application Code</label>
                         </div>
                     </div>
                 </div>
@@ -360,15 +376,15 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="md-form md-outline">
-                            <input type="text" id="f2" class="form-control form-control-lg" style="font-size: 20px;">
-                            <label for="f2" class="">Staff Name</label>
+                            <input type="text" name="bu_staff_name" id="bu-staff-name" class="form-control form-control-lg" style="font-size: 20px;" required >
+                            <label for="bu-staff-name" class="">Staff Name</label>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="md-form md-outline">
-                            <input type="text" id="f2" class="form-control form-control-lg">
-                            <label for="f2" class="">Receive Date</label>
+                            <input type="date" name="bu_receive_date" id="bu-receive-date" class="form-control form-control-lg" required >
+                            <label for="bu-receive-date" class="">Receive Date</label>
                         </div>
                     </div>
                 </div>
@@ -408,5 +424,9 @@
         $(document).ready(function () {
             $('.mdb-select').materialSelect();
         });
+
+        $("#per-dob").datepicker();
     </script>
+
+
 @endpush

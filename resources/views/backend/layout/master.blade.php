@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="{{ asset('components/mdb/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('components/mdb/css/mdb.min.css') }}">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+{{--    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />--}}
     @stack("styles")
 
     <style>
@@ -23,12 +24,12 @@
 <header>
 
     <!-- Sidebar navigation -->
-    @include("backend.layout.partials.sidebar")
-    <!-- Sidebar navigation -->
+@include("backend.layout.partials.sidebar")
+<!-- Sidebar navigation -->
 
     <!-- Navbar -->
-    @include("backend.layout.partials.navbar")
-    <!-- Navbar -->
+@include("backend.layout.partials.navbar")
+<!-- Navbar -->
 
 </header>
 <!-- Main Navigation -->
@@ -45,27 +46,13 @@
 </main>
 <!-- Main layout -->
 
-{{--<!-- Footer -->--}}
-{{--<footer class="page-footer pt-0 mt-5 rgba-stylish-light">--}}
-
-{{--    <!-- Copyright -->--}}
-{{--    <div class="footer-copyright py-3 text-center">--}}
-{{--        <div class="container-fluid">--}}
-{{--            © 2019 Copyright: <a href="#" target="_blank"> MDBootstrap.com </a>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-{{--</footer>--}}
-<!-- Footer -->
-
 <!-- SCRIPTS -->
 <!-- JQuery -->
 <script src="{{ asset('components/mdb/js/jquery-3.4.1.min.js') }}"></script>
-{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>--}}
-
 <script src="{{ asset('components/mdb/js/popper.min.js') }}"></script>
 <script src="{{ asset('components/mdb/js/bootstrap.js') }}"></script>
 <script src="{{ asset('components/mdb/js/mdb.min.js') }}"></script>
+{{--<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>--}}
 @stack("scripts")
 
 <!-- Initializations -->
@@ -99,18 +86,18 @@
 <script>
 
     $(function () {
-        $('h4, button').not('.check').toggleClass('dark-grey-text text-white');
-        $('.list-panel a').toggleClass('dark-grey-text');
-
-        $('footer, .card').toggleClass('dark-card-admin');
-        $('body, .navbar').toggleClass('white-skin navy-blue-skin');
-        $(this).toggleClass('white text-dark btn-outline-black');
-        $('body').toggleClass('dark-bg-admin');
-        $('h6, .card, p, td, th, i, li a, h4, input, label').not(
-            '#slide-out i, #slide-out a, .dropdown-item i, .dropdown-item').toggleClass('text-white');
-        $('.btn-dash').toggleClass('grey blue').toggleClass('lighten-3 darken-3');
-        $('.gradient-card-header').toggleClass('white black lighten-4');
-        $('.list-panel a').toggleClass('navy-blue-bg-a text-white').toggleClass('list-group-border');
+        // $('h4, button').not('.check').toggleClass('dark-grey-text text-white');
+        // $('.list-panel a').toggleClass('dark-grey-text');
+        //
+        // $('footer, .card').toggleClass('dark-card-admin');
+        // $('body, .navbar').toggleClass('white-skin navy-blue-skin');
+        // $(this).toggleClass('white text-dark btn-outline-black');
+        // $('body').toggleClass('dark-bg-admin');
+        // $('h6, .card, p, td, th, i, li a, h4, input, label').not(
+        //     '#slide-out i, #slide-out a, .dropdown-item i, .dropdown-item').toggleClass('text-white');
+        // $('.btn-dash').toggleClass('grey blue').toggleClass('lighten-3 darken-3');
+        // $('.gradient-card-header').toggleClass('white black lighten-4');
+        // $('.list-panel a').toggleClass('navy-blue-bg-a text-white').toggleClass('list-group-border');
 
         $('#dark-mode').on('click', function (e) {
 
