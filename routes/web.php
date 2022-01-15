@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/home", function () {
-    return view("welcome");
-})->middleware("auth", "verified");
+//Route::get("/home", function () {
+//    return view("welcome");
+//})->middleware("auth", "verified");
 
 Route::get("/loan-app", [LoanAppController::class, "index"])->name("loan.index");
 Route::get("/loan-app/create", [LoanAppController::class, "create"])->name("loan.create");

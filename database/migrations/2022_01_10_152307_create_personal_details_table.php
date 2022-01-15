@@ -18,7 +18,7 @@ class CreatePersonalDetailsTable extends Migration
             $table->string("name_kh", 100);
             $table->string("name_en", 100);
             $table->date("dob");
-            $table->integer("age");
+            $table->string("gender");
             $table->string("identity_no" ,20);
             $table->date("expiry_date");
             $table->string("marital_status", 10);
@@ -31,7 +31,8 @@ class CreatePersonalDetailsTable extends Migration
             $table->double("total_income");
             $table->text("address");
             $table->text("mortgage");
-            $table->boolean("status");
+            $table->string("email");
+            $table->boolean("status")->default("1");
             $table->timestamps();
         });
     }

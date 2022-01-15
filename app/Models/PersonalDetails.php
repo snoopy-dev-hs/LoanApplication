@@ -11,6 +11,8 @@ class PersonalDetails extends Model
 
     protected $table = "personal_details";
 
+    protected $fillable = ["name_kh"];
+
     public function loan_details () {
         return $this->belongsTo("App\Models\LoanDetails", "personal_id");
     }

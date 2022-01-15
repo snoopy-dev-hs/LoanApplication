@@ -19,6 +19,7 @@ class CreateGuarantorDetailsTable extends Migration
             $table->string("name_kh", 100);
             $table->string("name_en", 100);
             $table->date("dob");
+            $table->string("gender");
             $table->string("identity_no" ,20);
             $table->date("expiry_date");
             $table->string("marital_status", 10);
@@ -29,6 +30,8 @@ class CreateGuarantorDetailsTable extends Migration
             $table->double("monthly_income");
             $table->double("total_income");
             $table->text("address");
+            $table->text("mortgage");
+            $table->string("email", 100);
             $table->unsignedBigInteger("personal_id");
             $table->timestamps();
         });

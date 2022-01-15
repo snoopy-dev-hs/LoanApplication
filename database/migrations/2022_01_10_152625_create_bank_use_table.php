@@ -15,7 +15,8 @@ class CreateBankUseTable extends Migration
     {
         Schema::create('bank_use', function (Blueprint $table) {
             $table->increments("bank_use_id");
-            $table->string("application_code", 10);
+            $table->string("branch");
+            $table->string("application_code");
             $table->string("staff_name", 100);
             $table->date("receive_date");
             $table->unsignedBigInteger("personal_id");

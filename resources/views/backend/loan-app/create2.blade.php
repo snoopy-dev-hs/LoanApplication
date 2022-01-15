@@ -18,6 +18,9 @@
 @section("contents")
     <form action="{{ route("loan.store") }}" method="POST">
         @csrf
+
+
+
         <section class="section card">
             {{-- Personal Details --}}
             <div class="card-header">
@@ -53,10 +56,10 @@
                 <div class="row">
                     <div class="col-md-4 mb-4 mt-4">
                         <select name="per_gender" class="mdb-select ">
-                            <option value="" selected disabled>Select Gender</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="other">Other</option>
+                            <option value=""  disabled>Select Gender</option>
+                            <option value="female" @if(old("per_gender") == "female") selected @endif selected >Female</option>
+                            <option value="male" @if(old("per_gender") == "male") selected @endif >Male</option>
+                            <option value="other" @if(old("per_gender") == "other") selected @endif >Other</option>
                         </select>
                     </div>
 
@@ -94,8 +97,8 @@
                     <div class="col-md-4 mb-4 mt-4">
                         <!-- Name -->
                         <select name="per_marital_status" class="mdb-select ">
-                            <option value="" selected disabled>Select Marital Status</option>
-                            <option value="single">Single</option>
+                            <option value="" disabled>Select Marital Status</option>
+                            <option value="single" selected>Single</option>
                             <option value="married">Married</option>
                         </select>
                     </div>
@@ -146,8 +149,8 @@
                     <div class="col-md-6 mb-4">
                         <!-- Basic textarea -->
                         <div class="md-form md-outline">
-                            <textarea type="text" id="form101" class="md-textarea form-control" rows="3"></textarea>
-                            <label for="form101">Address</label>
+                            <textarea type="text" name="per_address" id="per-address" class="md-textarea form-control" rows="3" required></textarea>
+                            <label for="per-address">Address</label>
                         </div>
 
                     </div>
@@ -155,8 +158,8 @@
                     <div class="col-md-6 mb-4">
                         <!-- Basic textarea -->
                         <div class="md-form md-outline">
-                            <textarea type="text" id="form101" class="md-textarea form-control" rows="3"></textarea>
-                            <label for="form101">Mortgage</label>
+                            <textarea type="text" name="per_mortgage" id="per-mortgage" class="md-textarea form-control" rows="3" required></textarea>
+                            <label for="per-mortgage">Mortgage</label>
                         </div>
 
                     </div>
@@ -197,8 +200,8 @@
                 <div class="row">
                     <div class="col-md-4 mb-4 mt-4">
                         <select name="gu_gender" class="mdb-select ">
-                            <option value="" selected disabled>Select Gender</option>
-                            <option value="female">Female</option>
+                            <option value=""  disabled>Select Gender</option>
+                            <option value="female" selected >Female</option>
                             <option value="male">Male</option>
                             <option value="other">Other</option>
                         </select>
@@ -237,8 +240,8 @@
 
                     <div class="col-md-4 mb-4 mt-4">
                         <select name="gu_marital_status" class="mdb-select">
-                            <option value="" selected disabled>Select Marital Status</option>
-                            <option value="single">Single</option>
+                            <option value=""  disabled>Select Marital Status</option>
+                            <option value="single" selected >Single</option>
                             <option value="married">Married</option>
                         </select>
                     </div>
@@ -356,11 +359,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-4 mt-4">
                         <select name="bu_branch" class="mdb-select" id="bu-branch" style="outline: unset; border-radius: unset;">
-                            <option value="" selected disabled>Select Branch</option>
-                            <option value="pp">Phone Penh</option>
-                            <option value="pv">Prey Veng</option>
-                            <option value="kep">Kep</option>
-                            <option value="kompot">Kompot</option>
+                            <option value=""  disabled>Select Branch</option>
+                            <option value="pp" @if(old("bu_branch") == "pp") selected @endif selected>Phone Penh</option>
+                            <option value="pv" @if(old("bu_branch") == "pv") selected @endif >Prey Veng</option>
+                            <option value="kep" @if(old("bu_branch") == "kep") selected @endif >Kep</option>
+                            <option value="kompot" @if(old("bu_branch") == "kompot") selected @endif >Kompot</option>
                         </select>
                     </div>
 
