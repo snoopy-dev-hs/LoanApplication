@@ -30,7 +30,7 @@ class CreateGuarantorDetailsTable extends Migration
             $table->double("monthly_income");
             $table->double("total_income");
             $table->text("address");
-            $table->text("mortgage");
+            $table->text("mortgage")->nullable();
             $table->string("email", 100);
             $table->unsignedBigInteger("personal_id");
             $table->timestamps();

@@ -29,11 +29,13 @@
 {{--                    <div class="collapsible-body">--}}
                         <ul>
                             <li>
-                                <a href="{{ route("loan.index") }}" class="waves-effect">Loan List</a>
+                                <a href="{{ route("loan.index") }}" class="waves-effect">Loan Application</a>
                             </li>
+                            @if (Auth::user()->role != 0)
                             <li>
-                                <a href="#" class="waves-effect">Approve Loan List</a>
+                                <a href="{{route("loan.review.index")}}" class="waves-effect">Review Loan Request</a>
                             </li>
+                            @endif
                         </ul>
 {{--                    </div>--}}
                 </li>

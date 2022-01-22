@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap Template</title>
+    <title>Loan Application - Login</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="{{ asset('components/mdb/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('components/mdb/css/mdb.min.css') }}">
@@ -79,11 +79,11 @@
                                     </div>
 
                                     <div class="text-center">
-                                        <a href="{{ route("password.request") }}" class="text-white mb-1" id="under-line-link">Forget Password</a>
-                                        <br>
-                                        Don't have an account ?
-                                        <a href="{{ route("register") }}" class="text-white mb-1" id="under-line-link">Register Here</a>
-                                        <br />
+{{--                                        <a href="{{ route("password.request") }}" class="text-white mb-1" id="under-line-link">Forget Password</a>--}}
+{{--                                        <br>--}}
+{{--                                        Don't have an account ?--}}
+{{--                                        <a href="{{ route("register") }}" class="text-white mb-1" id="under-line-link">Register Here</a>--}}
+{{--                                        <br />--}}
                                         <button type="submit" class="btn purple-gradient btn-lg">Login</button>
                                     </div>
 

@@ -17,7 +17,7 @@ class CreateLoanDetailsTable extends Migration
         Schema::create('loan_details', function (Blueprint $table) {
             $table->increments("loan_det_id");
             $table->double("amount");
-            $table->integer("interest");
+            $table->double("interest");
             $table->integer("term");
             $table->text("purpose");
             $table->unsignedBigInteger("personal_id");

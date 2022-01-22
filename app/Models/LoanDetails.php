@@ -11,7 +11,15 @@ class LoanDetails extends Model
 
     protected $table = "loan_details";
 
+    protected $fillable = [
+        "amount",
+        "interest",
+        "term",
+        "purpose",
+        "personal_id"
+    ];
+
     public function personal_details () {
-        return this->hasOne("App\Models\PersonalDetails", "id");
+        return $this->hasOne("App\Models\PersonalDetails", "id");
     }
 }

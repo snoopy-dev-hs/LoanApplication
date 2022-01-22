@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFieldsToUsersTable extends Migration
+class CreateBranchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class AddFieldsToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean("status")->default(1);
-            $table->integer("role")->default(0);
+        Schema::create('branches', function (Blueprint $table) {
+            $table->increments("branch_id");
+            $table->string("branch_name");
+            $table->string("slug");
+            $table->boolean("is_active")->default(1);
+            $table->timestamps();
         });
     }
 
@@ -26,8 +29,6 @@ class AddFieldsToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('branches');
     }
 }

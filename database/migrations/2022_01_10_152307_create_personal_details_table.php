@@ -32,7 +32,9 @@ class CreatePersonalDetailsTable extends Migration
             $table->text("address");
             $table->text("mortgage");
             $table->string("email");
-            $table->boolean("status")->default("1");
+            $table->binary("images")->nullable();
+            $table->string("status")->default("1");
+            $table->boolean("is_active")->default("1");
             $table->timestamps();
         });
     }

@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="{{ asset('components/mdb/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('components/mdb/css/mdb.min.css') }}">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {{--    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />--}}
+{{--    @toastr_css--}}
     @stack("styles")
 
     <style>
@@ -37,7 +39,7 @@
 <!-- Main layout -->
 <main>
 
-    <div class="container-fluid">
+    <div>
 
         @yield("contents")
 
@@ -52,7 +54,9 @@
 <script src="{{ asset('components/mdb/js/popper.min.js') }}"></script>
 <script src="{{ asset('components/mdb/js/bootstrap.js') }}"></script>
 <script src="{{ asset('components/mdb/js/mdb.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {{--<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>--}}
+@toastr_render
 @stack("scripts")
 
 <!-- Initializations -->
