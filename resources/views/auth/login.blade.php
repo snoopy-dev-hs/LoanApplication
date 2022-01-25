@@ -79,11 +79,11 @@
                                     </div>
 
                                     <div class="text-center">
-{{--                                        <a href="{{ route("password.request") }}" class="text-white mb-1" id="under-line-link">Forget Password</a>--}}
-{{--                                        <br>--}}
-{{--                                        Don't have an account ?--}}
-{{--                                        <a href="{{ route("register") }}" class="text-white mb-1" id="under-line-link">Register Here</a>--}}
-{{--                                        <br />--}}
+                                        <a href="{{ route("password.request") }}" class="text-white mb-1" id="under-line-link">Forget Password</a>
+                                        <br>
+                                        Don't have an account ?
+                                        <a href="{{ route("register") }}" class="text-white mb-1" id="under-line-link">Register Here</a>
+                                        <br />
                                         <button type="submit" class="btn purple-gradient btn-lg">Login</button>
                                     </div>
 
